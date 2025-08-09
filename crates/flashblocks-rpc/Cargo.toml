@@ -1,74 +1,70 @@
 [package]
 name = "base-reth-flashblocks-rpc"
-version.workspace = true
-edition.workspace = true
-rust-version.workspace = true
-license.workspace = true
-homepage.workspace = true
-repository.workspace = true
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+homepage = "https://github.com/base/reth"
+repository = "https://github.com/base/reth"
 description = "Flashblocks RPC Support"
-
-[lints]
-workspace = true
 
 [dependencies]
 # reth
-reth.workspace = true
-reth-optimism-node.workspace = true
-reth-rpc-eth-api.workspace = true
-reth-evm.workspace = true
-reth-optimism-primitives.workspace = true
-reth-rpc-convert.workspace = true
-reth-optimism-rpc.workspace = true
-reth-optimism-evm.workspace = true
-reth-optimism-chainspec.workspace = true
-reth-provider.workspace = true
-reth-tracing.workspace = true
-reth-e2e-test-utils.workspace = true
-reth-optimism-cli.workspace = true
-reth-primitives.workspace = true
-reth-primitives-traits.workspace = true
+reth = { git = "https://github.com/paradigmxyz/reth", tag = "v1.6.0" }
+reth-optimism-node = { git = "https://github.com/paradigmxyz/reth", tag = "v1.6.0" }
+reth-rpc-eth-api = { git = "https://github.com/paradigmxyz/reth", tag = "v1.6.0" }
+reth-evm = { git = "https://github.com/paradigmxyz/reth", tag = "v1.6.0" }
+reth-optimism-primitives = { git = "https://github.com/paradigmxyz/reth", tag = "v1.6.0" }
+reth-rpc-convert = { git = "https://github.com/paradigmxyz/reth", tag = "v1.6.0" }
+reth-optimism-rpc = { git = "https://github.com/paradigmxyz/reth", tag = "v1.6.0" }
+reth-optimism-evm = { git = "https://github.com/paradigmxyz/reth", tag = "v1.6.0" }
+reth-optimism-chainspec = { git = "https://github.com/paradigmxyz/reth", tag = "v1.6.0" }
+reth-provider = { git = "https://github.com/paradigmxyz/reth", tag = "v1.6.0" }
+reth-tracing = { git = "https://github.com/paradigmxyz/reth", tag = "v1.6.0" }
+reth-e2e-test-utils = { git = "https://github.com/paradigmxyz/reth", tag = "v1.6.0" }
+reth-optimism-cli = { git = "https://github.com/paradigmxyz/reth", tag = "v1.6.0" }
+reth-primitives = { git = "https://github.com/paradigmxyz/reth", tag = "v1.6.0" }
+reth-primitives-traits = { git = "https://github.com/paradigmxyz/reth", tag = "v1.6.0" }
 
 # alloy
-alloy-primitives.workspace = true
-alloy-eips.workspace = true
-alloy-rpc-types.workspace = true
-alloy-rpc-types-engine.workspace = true
-alloy-rpc-types-eth.workspace = true
-alloy-consensus.workspace = true
-alloy-provider.workspace = true
+alloy-primitives = { version = "1.2.0", default-features = false, features = ["map-foldhash"] }
+alloy-eips = { version = "1.0.23", default-features = false }
+alloy-rpc-types = { version = "1.0.23", default-features = false }
+alloy-rpc-types-engine = { version = "1.0.23", default-features = false }
+alloy-rpc-types-eth = { version = "1.0.23" }
+alloy-consensus = { version = "1.0.23" }
+alloy-provider = { version = "1.0.23" }
+alloy-genesis = { version = "1.0.23", default-features = false }
+alloy-rpc-client = { version = "1.0.23" }
 
 # op-alloy
-op-alloy-rpc-types.workspace = true
-op-alloy-network.workspace = true
-op-alloy-consensus.workspace = true
-
-# alloy
-alloy-genesis.workspace = true
-alloy-rpc-client.workspace = true
+op-alloy-rpc-types = { version = "0.18.12", default-features = false }
+op-alloy-network = { version = "0.18.12", default-features = false }
+op-alloy-consensus = { version = "0.18.12", default-features = false }
 
 # rollup-boost
-rollup-boost.workspace = true
+rollup-boost = { git = "http://github.com/flashbots/rollup-boost", rev = "98fff8e059870d192739dd42d41f5244c49f4b9c" }
 
 # tokio
-tokio.workspace = true
-tokio-stream.workspace = true
-tokio-tungstenite.workspace = true
+tokio = { version = "1.44.2", features = ["full"] }
+tokio-stream = "0.1.11"
+tokio-tungstenite = { version = "0.26.2", features = ["native-tls"] }
 
 # async
-futures-util.workspace = true
+futures-util = "0.3"
 
 # rpc
-jsonrpsee.workspace = true
-jsonrpsee-types.workspace = true
+jsonrpsee = { version = "0.25.1" }
+jsonrpsee-types = { version = "0.25.1" }
 
 # misc
-tracing.workspace = true
-serde.workspace = true
-serde_json.workspace = true
-url.workspace = true
-metrics.workspace = true
-metrics-derive.workspace = true
-eyre.workspace = true
-brotli.workspace = true
-arc-swap.workspace = true
+tracing = { version = "0.1.41" }
+serde = "1"
+serde_json = "1.0"
+url = "2.5"
+metrics = "0.24.1"
+metrics-derive = "0.1"
+eyre = { version = "0.6.12" }
+brotli = "8.0.1"
+arc-swap = "1.7.1"
+
